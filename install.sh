@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 sudo apt update && sudo apt install zathura -y
 cp news ~/.local/bin/news
 chmod +x ~/.local/bin/news
