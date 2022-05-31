@@ -11,13 +11,13 @@ datedir=$(sed 's/\//-/g' <<<$date)
 
 mkdir -p $cachedir/$datedir
 
-curl -L "https://epaper.thedailystar.net/TDS/$date/Bangladesh/BUS/" > /tmp/news/tmpbus.html 
+curl -Ls "https://epaper.thedailystar.net/TDS/$date/Bangladesh/BUS/" > /tmp/news/tmpbus.html 
 linkdir=$(grep -Eio '<a [^>]+>' /tmp/news/tmpbus.html | cut -d\" -f2 | grep "pdf")
 
 
-curl -L "https://epaper.thedailystar.net/TDS/$date/Bangladesh/" > /tmp/news/tmpother1.html 
+curl -Ls "https://epaper.thedailystar.net/TDS/$date/Bangladesh/" > /tmp/news/tmpother1.html 
 linktmp=$(grep -Eio '<a [^>]+>' /tmp/news/tmpother1.html | cut -d\" -f2 | grep -v BUS | grep -v MAI | grep "Bangladesh")
-curl -L "https://epaper.thedailystar.net/$linktmp" > /tmp/news/tmpother2.html
+curl -Ls "https://epaper.thedailystar.net/$linktmp" > /tmp/news/tmpother2.html
 linkdir=$(grep -Eio '<a [^>]+>' /tmp/news/tmpother2.html | cut -d\" -f2 | grep "pdf")
 
 
