@@ -1,2 +1,2 @@
-# terminallinux
+# Terminallinux
 Terminal Daily Star
