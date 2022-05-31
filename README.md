@@ -6,6 +6,7 @@ This scripts uses the Daily Start Newspaper Website to scrape it and view the pd
 To install use the following command:
       
       git clone https://github.com/Rudra2002/terminallinux.git
+      cd terminallinux
       chmod +x install.sh
       ./install.sh
 
