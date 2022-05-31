@@ -11,7 +11,7 @@ datedir=$(sed 's/\//-/g' <<<$date)
 
 mkdir -p $cachedir/$datedir
 
-curl -L "https://epaper.thedailystar.net/TDS/$date/Bangladesh/MAI/" > /tmp/news/tmp.html 
+curl -Ls "https://epaper.thedailystar.net/TDS/$date/Bangladesh/MAI/" > /tmp/news/tmp.html 
 linkdir=$(grep -Eio '<a [^>]+>' /tmp/news/tmp.html | cut -d\" -f2 | grep "pdf")
 
 if [[ -z $linkdir ]]
