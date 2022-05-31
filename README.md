@@ -15,7 +15,7 @@ Just type the following command for the following functionalit
     onews
 
 
-If you want to see the newspaper of a specific date use the following command
+##If you want to see the newspaper of a specific date use the following command
 
     news d 
    or
