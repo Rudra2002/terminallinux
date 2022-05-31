@@ -1,0 +1,25 @@
+#!/bin/bash
+if [[ -z $1 ]]
+then 
+    date=$(date '+%Y/%m/%d')
+else
+    echo "Please enter date in format YYYY/MM/DD"
+    read date
+fi
+cachedir="/tmp/news"
+datedir=$(sed 's/\//-/g' <<<$date)
+
+mkdir -p $cachedir/$datedir
+
+curl -L "https://epaper.thedailystar.net/TDS/$date/Bangladesh/MAI/" > /tmp/news/tmp.html 
+linkdir=$(grep -Eio '<a [^>]+>' /tmp/news/tmp.html | cut -d\" -f2 | grep "pdf")
+
+if [[ -z $linkdir ]]
+then
+    echo "Not yet published"
+    exit 1
+fi
+    wget -rnc -O $cachedir/$datedir/main.pdf https://epaper.thedailystar.net/$linkdir
+zathura $cachedir/$datedir/main.pdf
+
+
