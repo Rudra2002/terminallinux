@@ -1,9 +1,15 @@
-# Terminal Linux
+# Terminal Linux Paper
 Terminal Daily Star
 
 This scripts uses the Daily Start Newspaper Website to scrape it and view the pdf in your linuxos using zathura as the pdf reader.
 
-Just type the following command for the following functionalit
+To install use the following command:
+      
+      git clone https://github.com/Rudra2002/terminallinux.git
+      chmod +x install.sh
+      ./install.sh
+
+Just type the following command for the following functionalities
    To see the original paper
     
     news
