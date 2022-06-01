@@ -1,7 +1,7 @@
 # Terminal Linux Paper
 Terminal Daily Star
 
-This scripts uses the Daily Start Newspaper Website to scrape it and view the pdf in your linuxos using zathura as the pdf reader.
+This scripts uses the Daily Star Newspaper Website to scrape it and view the pdf in your linuxos using zathura as the pdf reader.
 
 To install use the following command:
       
@@ -17,7 +17,7 @@ Just type the following command for the following functionalities
    To see the business section of the newspaper
    
     bnews
-   To see other related magazien of the newspaper
+   To see other related magazine of the newspaper
    
     onews
 
@@ -33,6 +33,6 @@ If you want to see the newspaper of a specific date use the following command
    
     onews d
     
-Use the installation script for install the 3 script.
+Use the installation script to install the 3 scripts.
 
 Thanks.
