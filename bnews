@@ -17,6 +17,7 @@ linkdir=$(grep -Eio '<a [^>]+>' /tmp/news/tmpbus.html | cut -d\" -f2 | grep "pdf
 if [[ -z $linkdir ]]
 then
     echo "Not yet published"
+    notify-send "Not yet published"
     exit 1
 fi
     wget -rnc -O $cachedir/$datedir/business.pdf https://epaper.thedailystar.net/$linkdir
